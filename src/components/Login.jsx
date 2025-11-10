@@ -15,27 +15,31 @@ export default function Login() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Username</label>
-        <input
-          type="text"
-          name="username"
-          value={formData.username}
-          onChange={handleChange}
-        />
-      </div>
-      <div>
-        <label>Password</label>
-        <input
-          type="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-        />
-      </div>
-      <button type="submit">Login</button>
-      <p>Current username: {formData.username}</p>
-    </form>
+   <form onSubmit={handleSubmit}>
+  <div style={{ marginBottom: "12px" }}>
+    <label style={{ display: "block", marginBottom: "6px" }}>Username</label>
+    <input
+      type="text"
+      name="username"
+      value={formData.username}
+      onChange={handleChange}
+      style={{ padding: "6px", width: "200px" }}
+    />
+  </div>
+
+  <div style={{ marginBottom: "12px" }}>
+    <label style={{ display: "block", marginBottom: "6px" }}>Password</label>
+    <input
+      type="password"
+      name="password"
+      value={formData.password}
+      onChange={handleChange}
+      style={{ padding: "6px", width: "200px" }}
+    />
+  </div>
+
+  <button type="submit">Login</button>
+  <p>Current username: {formData.username}</p>
+</form>
   );
 }
